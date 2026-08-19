@@ -2,12 +2,12 @@
 
 Automated system security and health monitoring utility built by Atharvaa Ravichandran (**ARTECH**).
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/HealthScanner-Windows.zip)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/HealthScanner-Windows.zip) [![Download for macOS](https://img.shields.io/badge/Download-macOS_.zip-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/HealthScanner-macOS.zip)
 
 ---
 
 ### 📥 Instructions
-Click the **Download Windows .exe** badge above to immediately download the latest application `.zip` file.
+Click the **Download Windows .exe** or **Download macOS .zip** badge above to download the latest application package for your operating system.
 
 ---
 
