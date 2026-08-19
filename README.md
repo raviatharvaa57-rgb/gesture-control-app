@@ -1,6 +1,6 @@
-# Gesture Control App
+# Mac / Windows Security & Health Scanner
 
-Automated gesture control tool compiled for Windows.
+Automated system security and health monitoring utility built by Atharvaa Ravichandran (**ARTECH**).
 
 [![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/GestureControl-Windows.zip)
 
@@ -13,19 +13,18 @@ Click the **Download Windows .exe** badge above to immediately download the late
 
 ## 📜 Terms of Use & Disclaimer
 
-By downloading or using **Gesture Control App**, you agree to the following terms:
+By downloading or using **Mac / Windows Security & Health Scanner**, you agree to the following terms:
 
-* **Educational & Personal Use:** This application is provided for educational, demonstration, and personal productivity purposes.
-* **Camera Privacy:** The application uses your local webcam solely for real-time hand-tracking and gesture recognition. No video feeds or images are ever recorded, saved, or transmitted to external servers.
-* **Use at Your Own Risk:** The software is provided "as is", without warranty of any kind. The developer is not responsible for any unexpected system inputs or software issues resulting from usage.
+* **Educational & Personal Use:** This application is provided for personal system monitoring, diagnostics, and educational purposes.
+* **System Privacy:** The scanner inspects local system stats (CPU, RAM, Disk Usage, and Battery Status) strictly on your device. No personal files, system logs, or private data are ever saved, collected, or transmitted externally.
+* **Use at Your Own Risk:** The software is provided "as is", without warranty of any kind. The developer is not responsible for any system overhead or software interactions resulting from usage.
 
 ---
 
 ## 🛠️ System Requirements
 
-* **OS:** Windows 10 / 11 (64-bit) or macOS
-* **Hardware:** Built-in or external USB Webcam
-* **Dependencies (Source Code):** Python 3.11+, OpenCV, MediaPipe, PyAutoGUI, Pynput
+* **OS:** macOS / Windows 10 & 11 (64-bit)
+* **Dependencies (Source Code):** Python 3.11+
 
 ---
 
