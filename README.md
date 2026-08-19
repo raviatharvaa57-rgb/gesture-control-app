@@ -2,7 +2,7 @@
 
 Automated system security and health monitoring utility built by Atharvaa Ravichandran (**ARTECH**).
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/GestureControl-Windows.zip)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/HealthScanner-Windows.zip)
 
 ---
 
