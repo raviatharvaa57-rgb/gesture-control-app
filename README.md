@@ -2,11 +2,9 @@
 
 Automated gesture control tool compiled for Windows.
 
-[![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/actions/workflows/build.yml)
+[![Download for Windows](https://img.shields.io/badge/Download-Windows_.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/raviatharvaa57-rgb/gesture-control-app/releases/download/latest/GestureControl-Windows.zip)
 
 ---
 
-### 📥 How to Download
-1. Click the **Download Windows .exe** button above.
-2. Click on the latest completed workflow run.
-3. Scroll down to **Artifacts** at the bottom and click **GestureControl-Windows**.
+### 📥 Instructions
+Click the **Download Windows .exe** badge above to immediately download the latest application `.zip` file.

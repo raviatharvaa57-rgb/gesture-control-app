@@ -1,7 +1,10 @@
 name: Build Executables
 
 on:
-  workflow_dispatch: # Allows manual trigger from GitHub
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build-windows:
@@ -25,8 +28,15 @@ jobs:
       run: |
         pyinstaller --noconfirm --onedir --windowed --collect-all mediapipe --collect-all cv2 --name "GestureControl" mac_scanner.py
 
-    - name: Upload Windows Build Artifact
-      uses: actions/upload-artifact@v4
+    - name: Compress Build Folder
+      run: |
+        powershell Compress-Archive -Path dist/GestureControl/* -DestinationPath dist/GestureControl-Windows.zip
+
+    - name: Create Automatic Release
+      uses: softprops/action-gh-release@v1
       with:
-        name: GestureControl-Windows
-        path: dist/GestureControl/
+        tag_name: latest
+        name: Latest Build
+        files: dist/GestureControl-Windows.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
