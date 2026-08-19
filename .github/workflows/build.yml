@@ -32,11 +32,12 @@ jobs:
       run: |
         powershell Compress-Archive -Path dist/GestureControl/* -DestinationPath dist/GestureControl-Windows.zip
 
-    - name: Create Automatic Release
-      uses: softprops/action-gh-release@v1
+    - name: Create or Update Release
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: latest
         name: Latest Build
         files: dist/GestureControl-Windows.zip
+        make_latest: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
