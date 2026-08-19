@@ -7,8 +7,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-windows:
-    runs-on: windows-latest
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            artifact_name: HealthScanner-Windows.zip
+            build_cmd: |
+              pyinstaller --noconfirm --onedir --windowed --name "HealthScanner" mac_scanner.py
+              powershell Compress-Archive -Path dist/HealthScanner/* -DestinationPath dist/HealthScanner-Windows.zip
+          - os: macos-latest
+            artifact_name: HealthScanner-macOS.zip
+            build_cmd: |
+              pyinstaller --noconfirm --onedir --windowed --name "HealthScanner" mac_scanner.py
+              cd dist && zip -r HealthScanner-macOS.zip HealthScanner.app
+
+    runs-on: ${{ matrix.os }}
 
     steps:
     - name: Check out repository
@@ -24,20 +38,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install pyinstaller opencv-python mediapipe pyautogui pynput psutil
 
-    - name: Build Windows Executable
-      run: |
-        pyinstaller --noconfirm --onedir --windowed --name "HealthScanner" mac_scanner.py
-
-    - name: Compress Build Folder
-      run: |
-        powershell Compress-Archive -Path dist/HealthScanner/* -DestinationPath dist/HealthScanner-Windows.zip
+    - name: Build Executable
+      run: ${{ matrix.build_cmd }}
 
     - name: Create or Update Release
       uses: softprops/action-gh-release@v2
       with:
         tag_name: latest
         name: Latest Build
-        files: dist/HealthScanner-Windows.zip
+        files: dist/${{ matrix.artifact_name }}
         make_latest: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
